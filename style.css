@@ -1,0 +1,401 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Fira Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+
+}
+h1,h2{
+    font-size: 2.5rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+p{
+    font-size: 1.2rem;
+    text-align: justify;
+}
+img{
+    max-width: 100%;
+}
+.dotted-hr{
+    border: 3px dotted #fff;
+    border-bottom: none;
+    margin: 20px auto;
+    width: 70px;
+}
+
+[class*="col-"]{
+    float: left;
+    padding: 10px;
+}
+/* for-mobile */
+[class*="col-"]{
+    width: 100%;
+}
+
+
+.navbar{
+    background-color: rgb(14, 100, 126);
+    padding: 1% 7%;
+    text-align: center;
+}
+.navbar::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.nav-title h1{
+    font-size: 1.50rem;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    margin: 10px;
+    padding-top: 10px;
+    padding: 10px;
+}
+.nav-menu{
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    
+    
+}
+.nav-menu a{
+    padding: 10px;
+    transition: .5s;
+    border-radius: 10px;
+    background-color: rgb(8, 68, 87);
+}
+.nav-menu a:hover{
+    background-color: grey;
+}
+
+/* profile-design */
+
+.profile{
+    padding: 130px 20px;
+    text-align: center;
+    position: relative;
+
+}
+.top-icon{
+    width: 165px;
+    height: auto;
+    position: absolute;
+    top: 25px;
+    right: 33px;
+    transition: transform 3s;
+}
+.top-icon:hover{
+    transform: rotate(360deg);
+    
+}
+.profile-details h1{
+    font-family: 'Satisfy', cursive;
+    font-size: 3rem;
+}
+.profile-details h2{
+    font-family: 'Satisfy', cursive;
+    font-size: 2rem;
+}
+.profile-details p{
+    text-align: center;
+    color: gray;
+    margin: 20px auto 30px auto;
+}
+.button-icon{
+    width: 165px;
+    height: auto;
+    position: absolute;
+    bottom: 7px;
+    left: 1px;
+    transition: transform 3s;
+}
+.button-icon:hover{
+    transform: rotate(360deg);
+}
+
+/*  About section */
+
+.about-me{
+    background-color: rgb(14, 100, 126);
+    padding: 1% 7%;
+    color: #fff;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.about-me h2{
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px;      
+}
+.about-img img{
+    border: 4px solid #fff;
+    border-radius: 50%;
+    width: 200px;
+    height: 220px;
+}
+
+.about-me::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+.about-details p{
+    text-align: center;
+    padding: 20px 0;
+}
+
+.cv-button{
+    font-size: 1.3rem;
+    border:none;
+    border-radius: 12px;
+    color: #fff;
+    background-color: rgb(2, 46, 54);
+    padding: 15px;
+    margin: 12px;
+    cursor: pointer;
+}
+
+/* professional experience */
+
+.professional-experience{
+    padding: 1% 0%;
+}
+
+.card{
+    background-color: #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    /* height: 700px; */
+    transition: 0.5s;
+    
+}
+.card:hover{
+    box-shadow: 0 4px 8px 5px black;
+}
+.card-icon{
+    text-align: center;
+}
+.card-icon i{
+    font-size: 1.50rem;
+    color: rgb(17, 125, 129);
+    border: 3px solid rgb(35, 101, 121);
+    border-radius: 50%;
+    width: 50px;
+    height: auto;
+    line-height: 50px;
+    
+}
+.card-title h2{
+    text-align: center;
+    margin: 15px;
+    background-color: #616161;
+    color: #fff;
+    padding: 10px;
+    text-transform: uppercase;
+}
+.skills-container{
+    padding-right: 20px;
+}
+.skills-container ul li{
+    list-style: none;
+    margin: 35px 10px;
+    font-weight: bolder;
+    position: relative;
+}
+.skills-container ul li::before{
+    content: "";
+    position: absolute;
+    background-color: rgb(86,86,153,.5);
+    width: 100%;
+    height: 10px;
+    top: calc(100% + 5px);
+    left: 0;
+    border-radius: 1000px;
+}
+.skills-container ul li::after{
+    content: "";
+    position: absolute;
+    background-color: rgb(86,86,153,1);
+    width: 0;
+    height: 10px;
+    top: calc(100% + 5px);
+    left: 0;
+    border-radius: 1000px;
+
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+.skills-container ul li.html::after{
+    animation-name: html;
+}
+@keyframes html{
+    to{
+        width: 90%;
+    }
+    
+}
+.skills-container ul li.css::after{
+    animation-name: css;
+}
+@keyframes css {
+    to{
+        width: 80%;
+    }
+    
+}
+.skills-container ul li.boot::after{
+    animation-name: boot;
+}
+@keyframes boot {
+    to{
+        width: 40%;
+    }
+    
+}
+
+.skills-container ul li.js::after{
+    animation-name: js;
+}
+@keyframes js {
+    to{
+        width: 10%;
+    }
+    
+}
+.skills-container ul li.jq::after{
+    animation-name: jq;
+}
+@keyframes jq {
+    to{
+        width: 3%;
+    }
+    
+}
+.skills-container ul li.node::after{
+    animation-name: node;
+}
+@keyframes node {
+    to{
+        width: 2%;
+    }
+    
+}
+.skills-container ul li.exp::after{
+    animation-name: exp;
+}
+@keyframes exp {
+    to{
+        width: 2.5%;
+    }
+    
+}
+.skills-container ul li.git::after{
+    animation-name: git;
+}
+@keyframes git {
+    to{
+        width: 12%;
+    }
+    
+}
+.skills-container ul li.react::after{
+    animation-name: boot;
+}
+@keyframes boot {
+    to{
+        width: 4%;
+    }
+    
+}
+
+
+
+
+.professional-experience::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+
+/* Achivement-contect */
+
+.achivement-contect{
+    padding: 30px 10px;
+    background-color: rgb(66, 75, 143);
+    color: #fff;
+}
+
+.contact{
+    text-align: center;
+}
+.contact input, textarea{
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+}
+
+.contact-link{
+    text-align: center;
+}
+.media-btn{
+    border: none;
+    width: 50px;
+    border-radius: 25px;
+    padding: 5px;
+    font-size: 30px;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.5s;
+}
+.media-btn:hover{
+    background-color: gray;
+}
+
+
+
+
+.achivement-contect::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* footer */
+
+.footer{
+    background-color: rgb(17, 16, 16);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+.footer-left a{
+    display: block;
+    margin: 15px;
+    font-size: 22px;
+    transition: 0.5s;
+}
+.footer-left a:hover{
+    background-color: gray;
+}
+
+.footer::after{
+    content: "";
+    clear: both;
+    display: block;
+}
